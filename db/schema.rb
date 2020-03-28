@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_232140) do
+ActiveRecord::Schema.define(version: 2020_03_28_142612) do
 
   create_table "games", force: :cascade do |t|
     t.string "url", null: false
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_232140) do
     t.boolean "has_ended"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "ping"
   end
 
   create_table "players", force: :cascade do |t|
@@ -27,6 +28,8 @@ ActiveRecord::Schema.define(version: 2020_03_27_232140) do
     t.integer "number_dice"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "order"
+    t.string "current_hand"
     t.index ["game_id"], name: "index_players_on_game_id"
   end
 
