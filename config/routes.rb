@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  # Get application health
+  get '/', to: 'games#health'
+
   # Get info for a game
   get '/games/:url', to: 'games#show'
   # Get Ping for a game

@@ -1,6 +1,10 @@
 class GamesController < ApplicationController
   before_action :find_restaurant_with_url, only: [:show, :ping, :start_game]
 
+  def health
+    render json: :success
+  end
+
   # Get Details of one game
   def show
     render json: @game
