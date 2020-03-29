@@ -18,15 +18,15 @@ Rails.application.routes.draw do
   delete '/games/:url', to: 'games#destroy'
 
 
-  # Get info for a player
-  get '/players/:url', to: 'players#show'
-  # Get Ping for a player
-  get '/players/ping/:url', to: 'players#ping'
-  # Create a player
-  post '/players', to: 'players#create'
-  # Start a player
-  post '/players/:url/start', to: 'players#start_player'
-  # Update a player
-  patch '/players/:url', to: 'players#update'
+  # # Get info for a player
+  # get '/players/:url', to: 'players#show'
+  # # Get Ping for a player
+  # get '/players/ping/:url', to: 'players#ping'
+  # # Create a player
+  # post '/players', to: 'players#create'
+  # # Start a player
+  # post '/players/:url/start', to: 'players#start_player'
+  # # Update a player
+  # patch '/players/:url', to: 'players#update'
 
 end
